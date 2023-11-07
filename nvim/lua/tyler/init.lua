@@ -2,7 +2,7 @@ require("tyler.set")
 require("tyler.remap")
 
 local augroup = vim.api.nvim_create_augroup
-local ThePrimeagenGroup = augroup('ThePrimeagen', {})
+local TylerGroup = augroup('Tyler', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -23,7 +23,7 @@ autocmd('TextYankPost', {
 })
 
 autocmd({"BufWritePre"}, {
-    group = ThePrimeagenGroup,
+    group = TylerGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
