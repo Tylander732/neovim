@@ -44,3 +44,7 @@ end)
 vim.keymap.set("n", "<C-s>", function ()
     vim.cmd("w")
 end)
+
+vim.keymap.set("n", "<leader>wv", function ()
+   vim.cmd("vsplit")
+end)
